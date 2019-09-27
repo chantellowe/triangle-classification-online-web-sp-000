@@ -16,8 +16,8 @@ class Triangle
     if @side_a <= 0 || @side_b <= 0 || @side_c <= 0 
       begin
         raise TriangleError
-      rescue TriangleError => error 
-        puts error.message
+      #rescue TriangleError => error 
+        #puts error.message
       end
     elsif @side_a == @side_b && @side_b == @side_c
       :equilateral
@@ -30,11 +30,6 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    
-    def message
-      
-    end
-    
   end
   
 end
